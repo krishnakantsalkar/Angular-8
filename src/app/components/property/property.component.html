@@ -1,0 +1,22 @@
+<p>property works!</p>
+
+<h2 *ngIf="username.length >= 5; else notfound">{{ username }}</h2>
+<ng-template #notfound>
+  <h2>not found any username</h2>
+</ng-template>
+
+<ul *ngFor="let course of courses">
+  <li>
+    {{ course }}
+  </li>
+</ul>
+<hr />
+<ul *ngFor="let protag of protagonist">
+  <li>{{ protag.name }}</li>
+  <li>{{ protag.id }}</li>
+  <li>{{ protag.email }}</li>
+
+  <ul *ngFor="let session of protag.sessions">
+    <li>{{ session.batch }}</li>
+  </ul>
+</ul>
