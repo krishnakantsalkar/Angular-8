@@ -1,0 +1,12 @@
+.card-header {
+  background-color: blue;
+  color: white;
+}
+
+.card-footer {
+  background-color: lightgrey;
+}
+.container {
+  margin-top: 20px;
+  margin-left: 50px;
+}

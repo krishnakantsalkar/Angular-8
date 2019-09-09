@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Route } from "@angular/router";
 import { HomeComponent } from "../home/home.component";
-import { AboutComponent } from "../about/about.component";
+import { ProductListComponent } from "../product-list/product-list.component";
 
 @Component({
   selector: "app-routes",
@@ -19,7 +19,12 @@ export const routes: Route[] = [
     component: HomeComponent
   },
   {
-    path: "About",
-    component: AboutComponent
+    path: "Product-List",
+    component: ProductListComponent
+  },
+  {
+    path: "",
+    redirectTo: "/Home",
+    pathMatch: "full"
   }
 ];

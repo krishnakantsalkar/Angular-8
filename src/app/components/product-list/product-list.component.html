@@ -1,0 +1,57 @@
+<p>product-list works!</p>
+
+<div class="container col-8">
+  <div class="card">
+    <div class="card-header">
+      Products List
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+              <button class="btn btn-primary" (click)="imgFunc()">
+                {{ isShow ? "Hide Image" : "Show Image" }}
+              </button>
+            </th>
+            <th>Product</th>
+            <th>Code</th>
+            <th>Availability</th>
+            <th>Ratings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of productData | listFilter: searchModel">
+            <td>
+              <img
+                src="{{ data.productImage }}"
+                class="imgStyle"
+                *ngIf="isShow"
+              />
+            </td>
+            <td>
+              <a routerLink="/product/{{ data.productId }}">{{
+                data.product
+              }}</a>
+            </td>
+            <td>{{ data.code }}</td>
+            <td>{{ data.available }}</td>
+            <td>
+              <i class="fa fa-inr">{{ data.price | number: "1.2-2" }}</i>
+            </td>
+            <td (click)="ratingFunc(data.rating)" [title]="data.rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer">
+      Created by Alex_mercer09@2019
+    </div>
+  </div>
+</div>

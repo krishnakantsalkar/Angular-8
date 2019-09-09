@@ -10,7 +10,10 @@ import { HomeComponent } from "./components/home/home.component";
 import { AboutComponent } from "./components/about/about.component";
 import { RouterModule } from "@angular/router";
 import { routes } from "./components/routes/routes.component";
-import { NavigationComponent } from './components/navigation/navigation.component';
+import { NavigationComponent } from "./components/navigation/navigation.component";
+import { ProductListComponent } from "./components/product-list/product-list.component";
+import { HttpClientModule } from "@angular/common/http";
+import { ListFilterPipe } from "./pipes/list-filter.pipe";
 
 @NgModule({
   declarations: [
@@ -21,9 +24,11 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     PropertyComponent,
     HomeComponent,
     AboutComponent,
-    NavigationComponent
+    NavigationComponent,
+    ProductListComponent,
+    ListFilterPipe
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
