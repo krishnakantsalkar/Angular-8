@@ -1,156 +1,133 @@
-<p>user-registration works!</p>
-
-<div class="container form-group">
+<div class="container">
   <div class="row">
     <div class="col-md-8" style="margin-top: 10px">
       <form [formGroup]="Register" (ngSubmit)="Save(Register.value)">
-        <div formGroupName="UserRegister">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="enter firstname"
-            formControlName="FirstName"
-            [class.is-valid]="
-              Register.controls.UserRegister.controls.FirstName.valid
-            "
-            [class.is-invalid]="
-              !Register.controls.UserRegister.controls.FirstName.valid &&
-              submitted
-            "
-          />
-          <div class="valid-feedback">
-            Looks good!
+        <div class="form-group">
+          <div class="first-name">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="enter First Name"
+              formControlName="FirstName"
+              [class.is-valid]="Register.controls.FirstName.valid"
+              [class.is-invalid]="
+                !Register.controls.FirstName.valid && submitted
+              "
+            />
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter proper details
+            </div>
           </div>
-          <div class="invalid-feedback">
-            Please choose a firstname.
+          <div class="last-name">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="enter Last Name"
+              formControlName="LastName"
+              [class.is-valid]="Register.controls.LastName.valid"
+              [class.is-invalid]="
+                !Register.controls.LastName.valid && submitted
+              "
+            />
+            <div class="valid-feedback">
+              looks good!
+            </div>
+            <div class="invalid-feedback">
+              please enter proper details
+            </div>
           </div>
-        </div>
-        <div formGroupName="UserRegister">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="enter firstname"
-            formControlName="FirstName"
-            [class.is-valid]="
-              Register.controls.UserRegister.controls.FirstName.valid
-            "
-            [class.is-invalid]="
-              !Register.controls.UserRegister.controls.FirstName.valid &&
-              submitted
-            "
-          />
-          <div class="valid-feedback">
-            Looks good!
+          <div class="pass-word">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="enter password"
+              formControlName="Password"
+              [class.is-valid]="Register.controls.Password.valid"
+              [class.is-invalid]="
+                !Register.controls.Password.valid && submitted
+              "
+            />
+            <div class="valid-feedback">
+              cool password:)!
+            </div>
+            <div class="invalid-feedback">
+              bad password men...........:(
+            </div>
           </div>
-          <div class="invalid-feedback">
-            Please choose a firstname.
+          <div class="email-id">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="enter Email"
+              formControlName="EmailId"
+              [class.is-valid]="Register.controls.EmailId.valid"
+              [class.is-invalid]="!Register.controls.EmailId.valid && submitted"
+            />
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please choose a good Email
+            </div>
           </div>
-        </div>
-        <div formGroupName="UserRegister">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="enter firstname"
-            formControlName="FirstName"
-            [class.is-valid]="
-              Register.controls.UserRegister.controls.FirstName.valid
-            "
-            [class.is-invalid]="
-              !Register.controls.UserRegister.controls.FirstName.valid &&
-              submitted
-            "
-          />
-          <div class="valid-feedback">
-            Looks good!
+          <div class="gender">
+            <input
+              type="boolean"
+              class="form-control"
+              placeholder="enter Gender"
+              formControlName="Gender"
+              [class.is-valid]="Register.controls.Gender.valid"
+              [class.is-invalid]="!Register.controls.Gender.valid && submitted"
+            />
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please choose a Gender
+            </div>
           </div>
-          <div class="invalid-feedback">
-            Please choose a firstname.
+          <div class="mobile-no">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="enter mobile number"
+              formControlName="MobileNo"
+              [class.is-valid]="Register.controls.MobileNo.valid"
+              [class.is-invalid]="
+                !Register.controls.MobileNo.valid && submitted
+              "
+            />
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter proper MobileNo.
+            </div>
           </div>
-        </div>
-        <div formGroupName="UserRegister">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="enter firstname"
-            formControlName="FirstName"
-            [class.is-valid]="
-              Register.controls.UserRegister.controls.FirstName.valid
-            "
-            [class.is-invalid]="
-              !Register.controls.UserRegister.controls.FirstName.valid &&
-              submitted
-            "
-          />
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-          <div class="invalid-feedback">
-            Please choose a firstname.
-          </div>
-        </div>
-        <div formGroupName="UserRegister">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="enter firstname"
-            formControlName="FirstName"
-            [class.is-valid]="
-              Register.controls.UserRegister.controls.FirstName.valid
-            "
-            [class.is-invalid]="
-              !Register.controls.UserRegister.controls.FirstName.valid &&
-              submitted
-            "
-          />
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-          <div class="invalid-feedback">
-            Please choose a firstname.
-          </div>
-        </div>
-        <div formGroupName="UserRegister">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="enter firstname"
-            formControlName="FirstName"
-            [class.is-valid]="
-              Register.controls.UserRegister.controls.FirstName.valid
-            "
-            [class.is-invalid]="
-              !Register.controls.UserRegister.controls.FirstName.valid &&
-              submitted
-            "
-          />
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-          <div class="invalid-feedback">
-            Please choose a firstname.
+          <div class="address">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="enter address"
+              formControlName="Address"
+              [class.is-valid]="Register.controls.Address.valid"
+              [class.is-invalid]="!Register.controls.Address.valid && submitted"
+            />
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter address
+            </div>
           </div>
         </div>
-        <div formGroupName="UserRegister">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="enter firstname"
-            formControlName="FirstName"
-            [class.is-valid]="
-              Register.controls.UserRegister.controls.FirstName.valid
-            "
-            [class.is-invalid]="
-              !Register.controls.UserRegister.controls.FirstName.valid &&
-              submitted
-            "
-          />
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-          <div class="invalid-feedback">
-            Please choose a firstname
-          </div>
-        </div>
+
+        <button type="submit" class="btn btn-primary btn-md">
+          Signup
+        </button>
       </form>
     </div>
   </div>

@@ -19,15 +19,13 @@ export class UserRegistrationComponent implements OnInit {
 
   ngOnInit() {
     this.Register = this.fb.group({
-      UserRegister: this.fb.group({
-        FirstName: ["", [Validators.required]],
-        Password: ["", [Validators.required]],
-        LastName: ["", [Validators.required]],
-        Gender: ["", [Validators.required]],
-        MobileNo: ["", [Validators.required]],
-        EmailId: ["", [Validators.required]],
-        Address: ["", [Validators.required]]
-      })
+      FirstName: ["", [Validators.required]],
+      Password: ["", [Validators.required]],
+      LastName: ["", [Validators.required]],
+      Gender: ["", [Validators.required]],
+      MobileNo: ["", [Validators.required]],
+      EmailId: ["", [Validators.required]],
+      Address: ["", [Validators.required]]
     });
   }
   Save(data: IuserRegistrationData) {
@@ -38,7 +36,7 @@ export class UserRegistrationComponent implements OnInit {
     console.log(data);
     this.userServices.userRegister(data).subscribe(data => {
       alert("Registration Succesful");
-      this.router.navigateByUrl("/home");
+      this.router.navigateByUrl("/Login");
       console.log(data);
     });
   }

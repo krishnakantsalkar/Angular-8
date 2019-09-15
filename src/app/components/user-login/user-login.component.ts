@@ -33,7 +33,7 @@ export class UserLoginComponent implements OnInit {
     console.log(data);
     this.userServices.userLogin(data).subscribe(data => {
       alert("login Succesful");
-      this.router.navigateByUrl("/home");
+      this.router.navigateByUrl("/content");
       console.log(data);
     });
   }

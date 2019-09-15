@@ -9,10 +9,21 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 import { routes } from "src/app/app-routing.module";
-import { AboutComponent } from './about/about.component';
+import { HomeComponent } from "./components/home/home.component";
+import { ContentComponent } from "./components/content/content.component";
+import { NavigationComponent } from "./components/navigation/navigation.component";
+import { AboutComponent } from "./components/about/about.component";
 
 @NgModule({
-  declarations: [AppComponent, UserRegistrationComponent, UserLoginComponent, AboutComponent],
+  declarations: [
+    AppComponent,
+    UserRegistrationComponent,
+    UserLoginComponent,
+    HomeComponent,
+    ContentComponent,
+    NavigationComponent,
+    AboutComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
