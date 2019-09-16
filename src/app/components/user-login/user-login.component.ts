@@ -11,6 +11,7 @@ import { Router } from "@angular/router";
 export class UserLoginComponent implements OnInit {
   public Login: FormGroup;
   public submitted: boolean = false;
+  public validateError: string;
   constructor(
     private fb: FormBuilder,
     private userServices: UserRegisterServices,
@@ -32,9 +33,13 @@ export class UserLoginComponent implements OnInit {
     }
     console.log(data);
     this.userServices.userLogin(data).subscribe(data => {
-      alert("login Succesful");
-      this.router.navigateByUrl("/content");
-      console.log(data);
+      if (data.UserIdentity) {
+        alert("login Succesful");
+        this.router.navigateByUrl("/content");
+        console.log(data);
+      } else {
+        this.validateError = data.Error;
+      }
     });
   }
 }

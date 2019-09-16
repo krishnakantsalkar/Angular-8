@@ -6,7 +6,7 @@ import { ContentComponent } from "./components/content/content.component";
 import { HomeComponent } from "./components/home/home.component";
 export const routes: Route[] = [
   {
-    path: "Home",
+    path: "",
     component: HomeComponent
   },
   {

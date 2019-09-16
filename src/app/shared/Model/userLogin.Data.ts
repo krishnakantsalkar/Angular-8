@@ -5,4 +5,9 @@ export interface IloginData {
       Password: string;
     }
   ];
+  UserIdentity?: string;
+  FirstName?: string;
+  LastName?: string;
+  MobileNo?: string;
+  Error?: string;
 }
